@@ -354,7 +354,7 @@ row1_col1, row1_col2, row1_col3, row1_col4 = st.columns(4)
 
 with row1_col1:
 
-    st.subheader('Input a pokemon')
+    st.subheader('Input new pokemon')
     with st.form('Add pokemon'):
         poke_name = st.text_input('Pokemon name')
         poke_lvl = st.number_input('Level', min_value=1)
