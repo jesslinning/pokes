@@ -1,0 +1,6 @@
+pokebase
+pandas
+queue
+copy
+os
+streamlit
