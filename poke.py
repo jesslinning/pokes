@@ -379,7 +379,7 @@ with row1_col1:
         stable.remove_from_belt(poke_name)
 
 with row1_col2:
-    st.subheader('Current captured pokemon')
+    st.subheader('Captured pokemon')
     
     # button to remove everyone from the stable
     if st.button('Remove all from stable'):
