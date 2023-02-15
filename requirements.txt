@@ -1,5 +1,3 @@
 pokebase
 pandas
-copy
-os
 streamlit
