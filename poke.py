@@ -1,6 +1,6 @@
 import pokebase as pb
 import pandas as pd
-import queue, copy, os
+import copy, os
 import streamlit as st
 
 class Pokemon:
