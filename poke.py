@@ -341,8 +341,7 @@ def initialize_recent_opponents(size=3):
 ### START APP
 
 st.set_page_config(layout="wide")
-# st.title('Pokemon Evaluation')
-st.title('Evaluation')
+st.title('Pokemon Evaluation')
 stable_path = './stable.csv'
 stable = create_stable(stable_path)
 opponent_poke = initialize_opponent()
@@ -355,6 +354,7 @@ row1_col1, row1_col2, row1_col3, row1_col4 = st.columns(4)
 
 with row1_col1:
 
+    st.subheader('Input a pokemon')
     with st.form('Add pokemon'):
         poke_name = st.text_input('Pokemon name')
         poke_lvl = st.number_input('Level', min_value=1)
@@ -379,6 +379,8 @@ with row1_col1:
         stable.remove_from_belt(poke_name)
 
 with row1_col2:
+    st.subheader('Current captured pokemon')
+    
     # button to remove everyone from the stable
     if st.button('Remove all from stable'):
         # st.write(dir(Stable))
@@ -393,6 +395,8 @@ with row1_col2:
     st.dataframe(stable_df, use_container_width=True)
 
 with row1_col3:
+    st.subheader('Pokemon to compare')
+    
     # add/remove all from the belt
     if st.button('Add all to belt'):
 
@@ -410,6 +414,7 @@ with row1_col3:
     st.dataframe(belt_df, use_container_width=True)
 
 with row1_col4:
+    st.subheader('Input opposing pokemon')
 
     with st.form('Opposing pokemon pokemon'):
         poke_name = st.text_input('Pokemon name')
